@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFAE99"
+    android:background="#FFFFFF"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -26,6 +26,7 @@
                 android:id="@+id/et_title"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
                 android:gravity="center"
                 android:hint="编辑备忘录"
                 android:textSize="20sp" />
@@ -46,21 +47,21 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scrollbars="vertical" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_marginLeft="2dp"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/et_content"
-                android:layout_width="fill_parent"
-                android:layout_height="500dp"
-                android:background="#FFAE99"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
                 android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>

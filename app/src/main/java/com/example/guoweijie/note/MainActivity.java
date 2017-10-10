@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.Image;
 import android.preference.DialogPreference;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.view.Window;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements AbsListView.OnScr
         setContentView(R.layout.activity_main);
 
 
-        TextView noteContent = (TextView) findViewById(R.id.note_content);
+       // TextView noteContent = (TextView) findViewById(R.id.note_content);
 
         //initNote();
 
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements AbsListView.OnScr
 
 
         //设置增加日记按钮
-        Button addNote = (Button) findViewById(R.id.btn_editnote);
+        ImageButton addNote = (ImageButton) findViewById(R.id.btn_editnote);
         addNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements AbsListView.OnScr
             String content = cursor.getString(cursor.getColumnIndex("content"));
             String date = cursor.getString(cursor.getColumnIndex("date"));
             int id =cursor.getInt(cursor.getColumnIndex("_id"));
+            Log.d("date=",date);
             Note note1 = new Note( R.drawable.ali,id,title,content, date);
             noteList.add(note1);
         }
@@ -147,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements AbsListView.OnScr
         Intent intent = new Intent(MainActivity.this,NoteEdit.class);
         intent.putExtra("id",note.getId());
         startActivity(intent);
-        Toast.makeText(MainActivity.this,note.getTitle(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(MainActivity.this,note.getTitle(),Toast.LENGTH_LONG).show();
         /*String content = listView.getItemAtPosition(n) + "";
         Log.i("main","position="+content);
         String content1 = content.substring(content.indexOf("=") + 1,

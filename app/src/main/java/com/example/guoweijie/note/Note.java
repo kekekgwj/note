@@ -31,5 +31,6 @@ public class Note {
     public  String getContent(){
         return  content;
     }
-    public  int getId(){return  id;}
+    public  int getId()
+    {return  id;}
 }

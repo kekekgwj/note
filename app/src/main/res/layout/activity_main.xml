@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+
     android:orientation="vertical" >
 
     <TextView
@@ -15,40 +16,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_editnote"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
-            android:text="添加备忘录"
-            android:textSize="20sp" />
-        <Button
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_margin="5dip"
             android:layout_weight="1"
-            android:background="@drawable/check_border"
-            android:gravity="center"
-            android:text="带边框颜色的Button"
-            />
+            android:background="@drawable/edit"
 
-        作者：gyymz1993
-        链接：http://www.jianshu.com/p/e5e8a98fc5d9
-        來源：简书
-        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-        <Button
+
+            android:textSize="20sp" />*/
+
+
+
+        <ImageButton
+            android:background="@drawable/camera"
             android:id="@+id/btn_editnote_photo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:layout_marginBottom="10dp"
-            android:text="添加备忘录11111"
             android:textSize="20sp" />
     </LinearLayout>
 
@@ -62,7 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="#81966F"></ListView>
+            android:background="#FFFFFF"
+            ></ListView>
     </LinearLayout>
 
 
